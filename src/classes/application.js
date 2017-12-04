@@ -1,3 +1,4 @@
+
 class Application {
     constructor() {
         this.sourcesListUrl = 'https://newsapi.org/v1/sources?country=us';
