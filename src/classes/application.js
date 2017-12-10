@@ -1,5 +1,6 @@
+import Source from './source';
 
-class Application {
+export default class Application {
     constructor() {
         this.sourcesListUrl = 'https://newsapi.org/v1/sources?country=us';
         this.sourceList = [];
@@ -27,5 +28,4 @@ class Application {
             divSourceList.appendChild(src.getDomElement());
         });
     }
-}
-
+};

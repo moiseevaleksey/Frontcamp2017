@@ -1,4 +1,6 @@
-class Source {
+import Article from './article';
+
+export default class Source {
     constructor({category, country, description, id, language, name, url}) {
         this.category = category;
         this.country = country;

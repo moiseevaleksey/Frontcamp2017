@@ -1,4 +1,4 @@
-class Article {
+export default class Article {
     constructor(source, {author, title, description, url, urlToImage, publishedAt}) {
         this.source = source;
         this.author = author;
