@@ -1,3 +1,4 @@
+
 const path = require('path');
 
 module.exports = {
@@ -9,12 +10,15 @@ module.exports = {
         path: path.resolve(__dirname, 'dist'),
     },
     module: {
-        rules: [
+        loaders: [
             {
-                test: /\.js?$/,
+                test: /\.jsx$/,
                 use: 'babel-loader',
                 exclude: /node_modules/,
-            },
+            }, {
+                test: /\.css$/,
+                loader: 'style-loader!css-loader',
+            }
         ],
     },
     resolve: {
