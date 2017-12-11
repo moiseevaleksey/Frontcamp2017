@@ -1,6 +1,10 @@
-import Application from './classes/application';
+import Button from './classes/button';
 import './style.css';
+import json from './test.json';
 
-let app = new Application();
+let baton = new Button();
 
-app.loadSources();
+let btn = document.getElementById('btn');
+
+btn.addEventListener('click', baton.proceed);
+btn.addEventListener('click', baton.vypilitsa);
