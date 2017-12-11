@@ -1,5 +1,5 @@
 body {
-    font-family: 'Open Sans Condensed',franklingothicmedicondcRg,Arial,Helvetica,sans-serif;
+    font-family: 'Open Sans Condensed', franklingothicmedicondcRg, Arial, Helvetica, sans-serif;
 }
 
 .content {
@@ -18,7 +18,7 @@ body {
     height: 100%;
 }
 
-.source input:checked + span{
+.source input:checked + span {
     background-color: #008CBA;
 }
 
@@ -38,12 +38,11 @@ body {
 
 .source span {
     text-align: center;
-    display:table-cell;
-    vertical-align:middle;
+    display: table-cell;
+    vertical-align: middle;
     border-radius: 2px;
     padding: 0 3px;
 }
-
 
 #article-list {
     display: flex;
@@ -73,6 +72,7 @@ body {
     overflow: hidden;
     text-overflow: ellipsis;
 }
+
 .article img {
     display: block;
     max-width: 100%;
@@ -104,8 +104,8 @@ body {
     border-radius: 50%;
     border-top-color: #008CBA;
     position: absolute;
-    left:50%;
-    top:50%;
+    left: 50%;
+    top: 50%;
     transform: translate(-50%, -50%);
     animation: 1s spin infinite linear;
 }
