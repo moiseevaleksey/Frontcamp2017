@@ -16,4 +16,12 @@ export default class Button {
         const baton = document.getElementById('btn');
         baton.style.display = 'none';
     }
+
+    init() {
+        var btn = document.createElement('BUTTON')
+        var t = document.createTextNode('Show News');
+        btn.id = 'btn';
+        btn.appendChild(t);
+        document.body.appendChild(btn);
+    }
 }
