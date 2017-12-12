@@ -1,7 +1,8 @@
-let app = new Application();
+import Button from './classes/button';
+import './style.css';
+import json from './test.json';
 
-app.loadSources();
+const showNewsButton = new Button();
 
-console.log('qwe');
-console.log('qwe');
-console.log('qwe');
+showNewsButton.init();
+

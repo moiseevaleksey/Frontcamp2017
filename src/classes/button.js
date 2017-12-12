@@ -1,0 +1,30 @@
+export default class Button {
+    constructor() {
+        this.text = 'Load News';
+    }
+
+    proceed() {
+        require.ensure([], (require) => {
+            const Application = require('./application').default;
+
+            let app = new Application();
+            app.loadSources();
+        });
+    }
+
+    hide() {
+        this.style.display = 'none';
+    }
+
+    init() {
+        const btn = document.createElement('button')
+        const buttonText = document.createTextNode(this.text);
+        btn.id = 'btn';
+        btn.appendChild(buttonText);
+
+        btn.addEventListener('click', this.proceed);
+        btn.addEventListener('click', this.hide.bind(btn));
+
+        document.body.appendChild(btn);
+    }
+}
