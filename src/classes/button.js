@@ -12,16 +12,19 @@ export default class Button {
         });
     }
 
-    vypilitsa() {
-        const baton = document.getElementById('btn');
-        baton.style.display = 'none';
+    hide() {
+        this.style.display = 'none';
     }
 
     init() {
-        var btn = document.createElement('BUTTON')
-        var t = document.createTextNode('Show News');
+        var btn = document.createElement('button')
+        var buttonText = document.createTextNode('Show News');
         btn.id = 'btn';
-        btn.appendChild(t);
+        btn.appendChild(buttonText);
+
+        btn.addEventListener('click', this.proceed);
+        btn.addEventListener('click', this.hide.bind(btn));
+
         document.body.appendChild(btn);
     }
 }
