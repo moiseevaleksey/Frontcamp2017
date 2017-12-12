@@ -17,8 +17,8 @@ export default class Button {
     }
 
     init() {
-        let btn = document.createElement('button')
-        let buttonText = document.createTextNode('Show News');
+        const btn = document.createElement('button')
+        const buttonText = document.createTextNode('Show News');
         btn.id = 'btn';
         btn.appendChild(buttonText);
 
