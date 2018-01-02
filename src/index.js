@@ -22,18 +22,3 @@ showNewsButton.init();
 // console.log(art.raiting());
 
 
-const store = createStore(reducer);
-
-const foo = () => {
-    console.log('DISPATCHED!');
-};
-
-store.subscribe(foo);
-
-store.dispatch({
-    type: 'ADD_COMPANY',
-    payload: 'epam'
-});
-
-console.log('current sate : ', store.getState());
-store.unsubscribe(foo);

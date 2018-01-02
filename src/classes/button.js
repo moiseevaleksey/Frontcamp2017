@@ -1,5 +1,38 @@
 import addEventListener from './facade';
 import EventObserver from './observer';
+import createStore from './redux';
+
+// Redux
+const initialState = {
+    sourcesVisibility : false
+};
+
+const reducer = (state = initialState, action) => {
+    switch (action.type) {
+        case 'SWITCH_SOURCE_VISIBILITY':
+            const sourcesVisibility = !state.sourcesVisibility;
+            return {
+                sourcesVisibility : sourcesVisibility
+            };
+        default:
+            return state
+    }
+ };
+
+const store = createStore(reducer);
+
+const hideShowNewsButton = () => {
+    const btn = document.getElementById('btn');
+    if (btn) {
+        btn.style.display = 'none';
+    }
+};
+
+store.subscribe(hideShowNewsButton);
+
+
+
+//=============
 
 const observer = new EventObserver();
 
@@ -23,7 +56,7 @@ Button.prototype.proceed = function () {
 };
 
 Button.prototype.hide = function () {
-    this.style.display = 'none';
+    store.dispatch({'type' : 'SWITCH_SOURCE_VISIBILITY'});
 };
 
 Button.prototype.init = function () {
@@ -33,7 +66,7 @@ Button.prototype.init = function () {
     btn.appendChild(buttonText);
 
     addEventListener(btn, 'click', this.proceed);
-    addEventListener(btn, 'click', this.hide.bind(btn));
+    addEventListener(btn, 'click', this.hide);
     
     document.body.appendChild(btn);
 };
@@ -45,5 +78,7 @@ function LoadNewsButton(text) {
 LoadNewsButton.prototype = Object.create(Button.prototype);
 LoadNewsButton.prototype.constructor = LoadNewsButton;
 
-
 export default LoadNewsButton;
+
+
+
