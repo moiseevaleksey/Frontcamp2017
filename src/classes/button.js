@@ -1,3 +1,5 @@
+import addEventListener from './facade';
+
 function Button() {
 }
 
