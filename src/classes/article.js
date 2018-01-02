@@ -7,7 +7,10 @@ export default class Article {
         this.url = url;
         this.urlToImage = urlToImage;
         this.publishedAt = new Date(publishedAt);
-
+    }
+    
+    raiting () {
+        return 0;
     }
 
     getDomElement() {
@@ -37,3 +40,4 @@ export default class Article {
         return article;
     }
 }
+
