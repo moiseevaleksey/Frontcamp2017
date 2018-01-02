@@ -3,18 +3,20 @@ import './style.css';
 import incRating from './classes/decorator';
 import Article from './classes/article';
 
-// const showNewsButton = new LoadNewsButton();
-// showNewsButton.init();
+const showNewsButton = new LoadNewsButton('Show News');
 
-const art = new Article('qwe', { 
-    author : 'aut', 
-    title : 'title', 
-    description: 'description', 
-    url: 'url', 
-    urlToImage : 'urlToImage',
-    publishedAt : 'publishedAt' 
-    });
+showNewsButton.init();
 
-incRating(art); 
+// const art = new Article('qwe', { 
+//     author : 'aut', 
+//     title : 'title', 
+//     description: 'description', 
+//     url: 'url', 
+//     urlToImage : 'urlToImage',
+//     publishedAt : 'publishedAt' 
+//     });
 
-console.log(art.raiting());
+// incRating(art); 
+
+// console.log(art.raiting());
+
