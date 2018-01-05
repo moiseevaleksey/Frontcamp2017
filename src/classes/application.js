@@ -1,9 +1,10 @@
 import Source from './source';
 
 export default class Application {
-    constructor() {
+    constructor(value) {
         this.sourcesListUrl = 'https://newsapi.org/v1/sources?country=us';
         this.sourceList = [];
+        this.fakeField = value;
     }
 
     loadSources() {
